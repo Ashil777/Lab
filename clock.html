@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:cadetblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+     
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            height: 90px;
+            background: linear-gradient(to bottom, #000000, #1d2671);
+            color: beige;
+            font-size: 50px;
+            border-radius: 5%;
+            border: dotted;
+            border-color: aliceblue;
+           justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Java Script clock</h3>
+    <div id="myclock"></div>
+    <script>
+        function clock(){
+            let now = new Date();
+            let hours = now.getHours().toString();
+            let minutes = now.getMinutes().toString();
+            let seconds = now.getSeconds().toString();
+
+            let timeval =`${hours}:${minutes}:${seconds}`;
+
+            document.getElementById("myclock").innerHTML=timeval;
+        }
+        setInterval(clock,1000);
+
+    </script>
+</body>
+</html>
